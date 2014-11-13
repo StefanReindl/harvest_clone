@@ -1,0 +1,16 @@
+<%= link_to "Back to client list", clients_path %><br/>
+
+<h2><%= @client.name %></h2>
+
+<%= link_to "Edit", [:edit, @client] %>
+<%= link_to "delete client", @client, method: :delete, confirm: "Confirm delete?" %>
+
+
+<h3>Projects:</h3>
+<p><%= link_to "Add a project", new_client_project_path(@client) %></p>
+
+<% @client.projects.each do |project| %>
+  <h4><%= link_to project.name, [@client, project] %></h4>
+<% end %>
+
+

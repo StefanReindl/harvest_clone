@@ -1,0 +1,7 @@
+</br>
+<div class='project-add'>
+	<%= form_for [@client, @project], role: 'form' do |form| %>
+		<%= render form %>
+	  <%= form.submit "Add Project", class: 'btn btn-primary' %>	  		
+	<% end %>
+</div>
